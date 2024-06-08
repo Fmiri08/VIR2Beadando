@@ -1,6 +1,6 @@
-table 50102 "Nutrition Line"
+table 50104 "Posted Nutrition Line"
 {
-    Caption = 'Nutrition Line';
+    Caption = 'Konyvelt Taplalkozasi Sor';
     DataClassification = CustomerContent;
     LookupPageId = "Nutrition Order Subform";
     DrillDownPageId = "Nutrition Order Subform";

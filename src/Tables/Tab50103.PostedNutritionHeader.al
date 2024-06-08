@@ -1,6 +1,6 @@
-table 50101 "Nutrition Header"
+table 50103 "Posted Nutrition Header"
 {
-    Caption = 'Nutrition Header';
+    Caption = 'Könyvelt táplálkozás';
     DataClassification = CustomerContent;
 
     fields
@@ -41,31 +41,31 @@ table 50101 "Nutrition Header"
         {
             Caption = 'Osszes Protein';
             FieldClass = FlowField;
-            CalcFormula = Sum("Nutrition Line".Protein Where("Nutrition No." = field("Nutrition No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Protein Where("Nutrition No." = field("Nutrition No.")));
         }
         field(7; "Total Fat"; Integer)
         {
             Caption = 'Osszes Zsir';
             FieldClass = FlowField;
-            CalcFormula = Sum("Nutrition Line".Fat Where("Nutrition No." = field("Nutrition No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Fat Where("Nutrition No." = field("Nutrition No.")));
         }
         field(8; "Total Carbohydrate"; Integer)
         {
             Caption = 'Osszes Szenhidrat';
             FieldClass = FlowField;
-            CalcFormula = Sum("Nutrition Line".Carbohydrate Where("Nutrition No." = field("Nutrition No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Carbohydrate Where("Nutrition No." = field("Nutrition No.")));
         }
         field(9; "Total KJ"; Integer)
         {
             Caption = 'Osszes kJ';
             FieldClass = FlowField;
-            CalcFormula = Sum("Nutrition Line".KJ Where("Nutrition No." = field("Nutrition No.")));
+            CalcFormula = Sum("Posted Nutrition Line".KJ Where("Nutrition No." = field("Nutrition No.")));
         }
         field(10; "Total Kcal"; Integer)
         {
             Caption = 'Osszes kcal';
             FieldClass = FlowField;
-            CalcFormula = Sum("Nutrition Line".Kcal Where("Nutrition No." = field("Nutrition No.")));
+            CalcFormula = Sum("Posted Nutrition Line".Kcal Where("Nutrition No." = field("Nutrition No.")));
         }
     }
     keys

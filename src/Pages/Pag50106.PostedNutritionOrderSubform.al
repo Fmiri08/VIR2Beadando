@@ -1,8 +1,10 @@
-page 50104 "Nutrition Order Subform"
+page 50106 "Posted Nutrition Order Subform"
 {
-    Caption = 'Nutrition Order Subform';
+    ApplicationArea = All;
+    Caption = 'Posted Nutrition Order Subform';
     PageType = ListPart;
-    SourceTable = "Nutrition Line";
+    SourceTable = "Posted Nutrition Line";
+    UsageCategory = History;
 
     layout
     {
