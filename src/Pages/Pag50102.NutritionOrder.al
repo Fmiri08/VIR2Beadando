@@ -122,6 +122,7 @@ page 50102 "Nutrition Order"
             }
         }
     }
+    //nézi, hogy nyitott-e, ha igen lehet modósítani
     trigger OnOpenPage()
     begin
         PageEditable := Rec.Status = Rec.Status::Nyitott;

@@ -33,6 +33,7 @@ table 50100 Macronutrients
         field(6; Unit; Text[10])
         {
             Caption = 'Unit';
+            // alap mértékegység tábla  
             TableRelation = "Unit of Measure";
             DataClassification = CustomerContent;
         }

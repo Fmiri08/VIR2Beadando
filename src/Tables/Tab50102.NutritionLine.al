@@ -7,7 +7,7 @@ table 50102 "Nutrition Line"
 
     fields
     {
-        field(1; "Nutrition No."; Code[10])
+        field(1; "Nutrition No."; Code[20])
         {
             Caption = 'Nutrition No.';
             TableRelation = "Nutrition Header"."Nutrition No.";
@@ -37,10 +37,20 @@ table 50102 "Nutrition Line"
                 if Nutrient.Get(Rec."Nutrition Code") then begin
                     Rec.Description := Nutrient.Description;
                     Rec."Unit of Measure" := Nutrient.Unit;
+                    Rec.Protein := Nutrient.Protein * Quantity;
+                    Rec.Fat := Nutrient.Fat * Quantity;
+                    Rec.Carbohydrate := Nutrient.Carbohydrate * Quantity;
+                    Rec."KJ" := Nutrient."Energy (KJ)" * Quantity;
+                    Rec."Kcal" := Nutrient."Energy (Kcal)" * Quantity;
                 end
                 else begin
                     Rec."Description" := '';
                     Rec."Unit of Measure" := '';
+                    Rec.Protein := 0;
+                    Rec.Fat := 0;
+                    Rec.Carbohydrate := 0;
+                    Rec."KJ" := 0;
+                    Rec."Kcal" := 0;
                 end;
             end;
         }
